@@ -44,8 +44,9 @@ class MassDM:
 
         for user in dm_these:
             try:
-                await self.bot.send_message(user,
-                                            message.format(user, role, sender))
+                if user.dm_channel==None:
+                    user.create_dm()
+                user.dm_channel.send("Here goes your message")
             except (discord.Forbidden, discord.HTTPException):
                 continue
 
