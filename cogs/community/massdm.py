@@ -1,3 +1,4 @@
+import discord
 from typing import List
 
 from discord.ext import commands
