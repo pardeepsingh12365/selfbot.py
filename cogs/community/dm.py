@@ -36,7 +36,7 @@ class MassDM:
         sender = ctx.author
 
         try:
-            await message.delete()
+            await ctx.message.delete()
         except:
             pass
 
