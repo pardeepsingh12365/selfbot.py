@@ -9,7 +9,7 @@ class MassDM:
 
     def __init__(self, bot: commands.Bot):
         self.bot = bot
-        self.role=[]
+        self.roled=[]
 
     def _member_has_role(self, member: discord.Member, role: discord.Role):
         return role in member.role
@@ -18,8 +18,8 @@ class MassDM:
                              role: discord.Role):
         for member in server.members:
             if self._member_has_role(member, role):
-                self.role.append(member)
-        return role
+                self.roled.append(member)
+        return roled
 
     @commands.command(no_pm=True, name="massdm",
                       aliases=["mdm"])
