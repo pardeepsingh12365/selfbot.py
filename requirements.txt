@@ -1,4 +1,4 @@
-git+https://github.com/fourjr/discord.py@rewrite
+git+git://github.com/Rapptz/discord.py.git#egg=discord.py[voice]
 lxml
 mtranslate
 colorthief
