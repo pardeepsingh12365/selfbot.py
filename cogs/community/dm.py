@@ -19,7 +19,7 @@ class MassDM:
         for member in server.members:
             if self._member_has_role(member, role):
                 self.roled.append(member)
-        return roled
+        return self.roled
 
     @commands.command(no_pm=True, name="massdm",
                       aliases=["mdm"])
