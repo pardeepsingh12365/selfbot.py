@@ -44,9 +44,7 @@ class MassDM:
 
         for user in dm_these:
             try:
-                if user.dm_channel==None:
-                    user.create_dm()
-                user.dm_channel.send("Here goes your message")
+               user.send("Your message goes here")
             except (discord.Forbidden, discord.HTTPException):
                 continue
 
