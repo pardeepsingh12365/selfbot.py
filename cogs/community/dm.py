@@ -23,7 +23,7 @@ class MassDM:
 
     @commands.command(no_pm=True, name="massdm",
                       aliases=["mdm"])
-    async def _mdm(self, ctx: commands.Context,
+    async def _mdm(self, ctx,
                    role: discord.Role, *, message: str):
         """Sends a DM to all Members with the given Role.
         Allows for the following customizations:
@@ -32,11 +32,11 @@ class MassDM:
         {2} is the person sending the message.
         """
 
-        server = ctx.message.guild
-        sender = ctx.message.author
+        server = guild
+        sender = author
 
         try:
-            await ctx.message.delete()
+            await message.delete()
         except:
             pass
 
@@ -44,7 +44,7 @@ class MassDM:
 
         for user in dm_these:
             try:
-               user.send("Your message goes here")
+               await user.send("Your message goes here")
             except (discord.Forbidden, discord.HTTPException):
                 continue
 
