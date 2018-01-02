@@ -33,7 +33,7 @@ class MassDM:
         """
 
         server = ctx.guild
-        sender = author
+        sender = ctx.author
 
         try:
             await message.delete()
