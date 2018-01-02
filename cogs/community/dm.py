@@ -32,7 +32,7 @@ class MassDM:
         {2} is the person sending the message.
         """
 
-        server = guild
+        server = ctx.guild
         sender = author
 
         try:
