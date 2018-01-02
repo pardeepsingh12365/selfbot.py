@@ -14,9 +14,9 @@ class MassDM:
     def _member_has_role(self, member: discord.Member, role: discord.Role):
         return role in member.roles
 
-    def _get_users_with_role(self, server: discord.guild,
+    def _get_users_with_role(self, server: discord.server,
                              role: discord.Role):
-        for member in guild.members:
+        for member in server.members:
             if self._member_has_role(member, role):
                 self.roled.append(member)
         return roled
