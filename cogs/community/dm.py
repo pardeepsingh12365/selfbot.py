@@ -44,7 +44,7 @@ class MassDM:
 
         for user in dm_these:
             try:
-               await user.send("Your message goes here")
+               await user.send(message)
             except (discord.Forbidden, discord.HTTPException):
                 continue
 
