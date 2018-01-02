@@ -12,7 +12,7 @@ class MassDM:
         self.roled=[]
 
     def _member_has_role(self, member: discord.Member, role: discord.Role):
-        return role in member.role
+        return role in member.roles
 
     def _get_users_with_role(self, server: discord.guild,
                              role: discord.Role):
