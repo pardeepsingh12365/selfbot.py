@@ -298,9 +298,9 @@ class Information:
             fmt = '{d}d ' + fmt
         uptime = fmt.format(d=days, h=hours, m=minutes, s=seconds)
 
-        github = '[not now](not now)'
-        server = '[not now](not now)'
-        website = '[not now](not now)'
+        github = '[not now]()'
+        server = '[not now]()'
+        website = '[not now]()'
 
 
         embed.add_field(name='Author', value='not here')
@@ -313,7 +313,8 @@ class Information:
         embed.add_field(name='Process', value=f'{memory_usage:.2f} MiB\n{cpu_usage:.2f}% CPU')
         embed.add_field(name='Github', value=github)
         embed.add_field(name='Discord', value=server)
-        embed.add_field(name='Website', value=website)
+        embed.add_field(
+		name='Website', value=website)
         embed.set_footer(text=f'Powered by discord.py {discord.__version__}')
         await ctx.send(embed=embed)
 
