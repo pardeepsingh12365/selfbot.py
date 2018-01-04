@@ -268,7 +268,7 @@ class Information:
         '''See information about the selfbot and latest changes.'''
 
         embed = discord.Embed()
-        embed.url = 'not now'
+        embed.url = ''
         embed.colour = await ctx.get_dominant_color(ctx.author.avatar_url)
 
         embed.set_author(name='selfbot.py', icon_url=ctx.author.avatar_url)
