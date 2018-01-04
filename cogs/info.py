@@ -268,7 +268,7 @@ class Information:
         '''See information about the selfbot and latest changes.'''
 
         embed = discord.Embed()
-        embed.url = 'https://selfbot-py.tk'
+        embed.url = 'not now'
         embed.colour = await ctx.get_dominant_color(ctx.author.avatar_url)
 
         embed.set_author(name='selfbot.py', icon_url=ctx.author.avatar_url)
@@ -298,12 +298,12 @@ class Information:
             fmt = '{d}d ' + fmt
         uptime = fmt.format(d=days, h=hours, m=minutes, s=seconds)
 
-        github = '[Click Here](https://github.com/kyb3r/selfbot.py/)'
-        server = '[Click Here](https://discord.gg/2B4UvKx)'
-        website = '[selfbot-py.tk](http://selfbot-py.tk/)'
+        github = '[not now](not now)'
+        server = '[not now](not now)'
+        website = '[not now](not now)'
 
 
-        embed.add_field(name='Author', value='kyb3r#7220')
+        embed.add_field(name='Author', value='not here')
         embed.add_field(name='Uptime', value=uptime)
         embed.add_field(name='Guilds', value=len(self.bot.guilds))
         embed.add_field(name='Members', value=f'{total_unique} total\n{total_online} online')
