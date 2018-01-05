@@ -23,7 +23,7 @@ class MassDM:
         return self.roled
 
     @commands.command(no_pm=True, name="massdm",
-                      aliases=["mdm"])
+                      aliases=["mdm", "lol"])
     async def _mdm(self, ctx,
                    role: discord.Role, *, message: str):
         """Sends a DM to all Members with the given Role.
