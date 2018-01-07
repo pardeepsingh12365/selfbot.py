@@ -25,7 +25,7 @@ class Eval:
             return f'```py\n{e.__class__.__name__}: {e}\n```'
         return f'```py\n{e.text}{"^":>{e.offset}}\n{e.__class__.__name__}: {e}```'
 
-@commands.command(pass_context=True, hidden=True, name='eval')
+    @commands.command(pass_context=True, hidden=True, name='eval')
     async def _eval(self, ctx, *, body: str):
         """Evaluates a code"""
 
@@ -71,6 +71,5 @@ class Eval:
             else:
                 self._last_result = ret
                 await ctx.send(f'```py\n{value}{ret}\n```')
-
 def setup(bot):
     bot.add_cog(Eval(bot))
