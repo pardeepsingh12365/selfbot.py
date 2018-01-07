@@ -141,7 +141,7 @@ class Utility:
                 for page in em_list:
                     await ctx.send(page)
 
-    @commands.command(name='presence')
+    @commands.command(name='presence', aliases=['set'])
     async def _presence(self, ctx, status, *, message=None):
         '''Change your Discord status! ("Playing", or clear it!)'''
         status = status.lower()
